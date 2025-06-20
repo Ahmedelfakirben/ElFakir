@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Portafolio digital de Ahmed El Fakir - IT Professional & SOC Specialist">
+    <meta name="keywords" content="Ahmed El Fakir, IT, SOC, Cybersecurity, Portfolio, Tétouan, Marruecos">
+    <meta name="author" content="Ahmed El Fakir">
+    
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ahmed El Fakir">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- Performance and Loading -->
+    <meta name="preload" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ahmed El Fakir - IT Professional Portfolio">
+    <meta property="og:description" content="Especialista en IT con 3+ años de experiencia en SOC y administración de sistemas">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.elfakir.com">
+    <meta property="og:image" content="https://www.elfakir.com/og-image.png">
+    
+    <title>Ahmed El Fakir - Matrix Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS Variables -->
+    <style>
+        :root {
+            --matrix-green: #00ff00;
+            --matrix-dark-green: #003300;
+            --matrix-bg: #000000;
+        }
+        
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--matrix-bg);
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100vw;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        #root {
+            min-height: 100vh;
+            width: 100vw;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Orbitron', monospace;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 0, 0.5);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 255, 0, 0.7);
+        }
+        
+        /* Mobile optimizations */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .touch-optimization {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        /* Prevent zoom on inputs */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"],
+        textarea {
+            font-size: 16px !important;
+            transform: translateZ(0);
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+        
+        /* Smooth scrolling for mobile */
+        .mobile-scroll {
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+        
+        /* Hide address bar on mobile */
+        .full-screen-mobile {
+            height: 100vh;
+            height: -webkit-fill-available;
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <div style="color: #00ff00; background: #000; padding: 20px; text-align: center; font-family: monospace;">
+            <h1>⚠️ JavaScript Requerido</h1>
+            <p>Este portafolio requiere JavaScript para funcionar correctamente.</p>
+            <p>Por favor, habilita JavaScript en tu navegador para ver el contenido completo.</p>
+            <hr style="border-color: #00ff00; margin: 20px 0;">
+            <p><strong>Ahmed El Fakir</strong> - IT Professional & SOC Specialist</p>
+            <p>📧 ahmed@elfakir.com | 📱 (+212) 656185848</p>
+        </div>
+    </noscript>
+    
+    <!-- React Root -->
+    <div id="root" class="full-screen-mobile"></div>
+    
+    <!-- Start Screen - OPTIMIZADO PARA MÓVIL -->
+    <div id="start-screen" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        height: -webkit-fill-available;
+        background: #000;
+        color: #00ff00;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        font-family: 'JetBrains Mono', monospace;
+        padding: 20px;
+        box-sizing: border-box;
+    ">
+        <div style="
+            font-size: clamp(1.5rem, 8vw, 3rem); 
+            margin-bottom: 30px; 
+            text-shadow: 0 0 20px #00ff00; 
+            animation: glow 2s infinite;
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+        ">
+            AHMED EL FAKIR
+        </div>
+        <div style="
+            font-size: clamp(0.8rem, 4vw, 1.2rem); 
+            margin-bottom: 40px; 
+            opacity: 0.8;
+            text-align: center;
+        ">
+            IT Specialist
+        </div>
+        <button id="start-button" style="
+            padding: 15px 40px;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            background: linear-gradient(45deg, #00ff00, #00aa00);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            font-weight: bold;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            min-height: 60px;
+            min-width: 150px;
+            touch-action: manipulation;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        " 
+        ontouchstart="" 
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 40px rgba(0, 255, 0, 0.8)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 30px rgba(0, 255, 0, 0.5)';"
+        ontouchstart="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 40px rgba(0, 255, 0, 0.8)';"
+        ontouchend="this.style.transform='scale(1)'; this.style.boxShadow='0 0 30px rgba(0, 255, 0, 0.5)';">
+            START
+        </button>
+        
+
+        
+        <style>
+            @keyframes glow {
+                0%, 100% { text-shadow: 0 0 20px #00ff00; }
+                50% { text-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00; }
+            }
+        </style>
+    </div>
+
+    <!-- Loading Animation - OPTIMIZADO PARA MÓVIL -->
+    <div id="loading-screen" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        height: -webkit-fill-available;
+        background: #000;
+        color: #00ff00;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        font-family: 'JetBrains Mono', monospace;
+        padding: 20px;
+        box-sizing: border-box;
+    ">
+        <div id="loading-title" style="
+            font-size: clamp(1.2rem, 6vw, 2.5rem); 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 20px #00ff00; 
+            animation: glow 2s infinite;
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+        ">AHMED EL FAKIR LOADING</div>
+        <div style="
+            width: min(400px, 90vw); 
+            height: 6px; 
+            background: #003300; 
+            border-radius: 3px; 
+            overflow: hidden; 
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        ">
+            <div id="loading-bar" style="
+                width: 0%;
+                height: 100%;
+                background: linear-gradient(90deg, #00ff00, #00aa00, #00ff00);
+                border-radius: 3px;
+                animation: loadingBar 2.5s ease-in-out forwards;
+                box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+            "></div>
+        </div>
+        <div style="
+            margin-top: 25px; 
+            font-size: clamp(0.8rem, 4vw, 1rem); 
+            opacity: 0.8; 
+            text-align: center;
+            max-width: 350px;
+        ">
+            <span id="loading-text">Inicializando sistema de portafolio...</span><br>
+            <span id="loading-subtext" style="font-size: clamp(0.7rem, 3vw, 0.8rem); opacity: 0.6;">Activando interfaz neural...</span>
+        </div>
+        
+        <style>
+            @keyframes loadingBar {
+                0% { width: 0%; }
+                25% { width: 30%; }
+                50% { width: 60%; }
+                75% { width: 85%; }
+                100% { width: 100%; }
+            }
+        </style>
+    </div>
+    
+    <script>
+        // Prevent zoom on double tap
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Prevent context menu on long press
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Handle viewport changes on mobile
+        function handleViewportChange() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        window.addEventListener('resize', handleViewportChange);
+        window.addEventListener('orientationchange', handleViewportChange);
+        handleViewportChange();
+        
+        // Handle start button click
+        document.addEventListener('DOMContentLoaded', function() {
+            const startButton = document.getElementById('start-button');
+            const startScreen = document.getElementById('start-screen');
+            
+            if (startButton) {
+                // Handle both click and touch events
+                const handleStart = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Haptic feedback for mobile
+                    if (navigator.vibrate) {
+                        navigator.vibrate(50);
+                    }
+                    
+                    // Hide start screen with fade effect
+                    startScreen.style.opacity = '0';
+                    startScreen.style.transition = 'opacity 0.5s ease';
+                    
+                    setTimeout(() => {
+                        startScreen.style.display = 'none';
+                        // Trigger React app to show language selection
+                        window.dispatchEvent(new CustomEvent('showLanguageSelection'));
+                    }, 500);
+                };
+                
+                startButton.addEventListener('click', handleStart);
+                startButton.addEventListener('touchend', handleStart);
+            }
+            
+            // Function to show loading screen (called from React)
+            window.showLoadingScreen = function(language = 'es') {
+                const loadingScreen = document.getElementById('loading-screen');
+                const loadingTitle = loadingScreen.querySelector('#loading-title');
+                const loadingText = loadingScreen.querySelector('#loading-text');
+                const loadingSubtext = loadingScreen.querySelector('#loading-subtext');
+                const loadingBar = loadingScreen.querySelector('#loading-bar');
+                
+                // Set loading texts based on language
+                const loadingTexts = {
+                    es: {
+                        title: 'AHMED EL FAKIR CARGANDO',
+                        text: 'Inicializando sistema de portafolio...',
+                        subtext: 'Activando interfaz neural...'
+                    },
+                    en: {
+                        title: 'AHMED EL FAKIR LOADING',
+                        text: 'Initializing portfolio system...',
+                        subtext: 'Activating neural interface...'
+                    },
+                    fr: {
+                        title: 'AHMED EL FAKIR CHARGEMENT',
+                        text: 'Initialisation du système portfolio...',
+                        subtext: 'Activation de l\'interface neuronale...'
+                    }
+                };
+                
+                const texts = loadingTexts[language] || loadingTexts.es;
+                
+                if (loadingTitle) loadingTitle.textContent = texts.title;
+                if (loadingText) loadingText.textContent = texts.text;
+                if (loadingSubtext) loadingSubtext.textContent = texts.subtext;
+                
+                // Reset loading bar animation
+                if (loadingBar) {
+                    loadingBar.style.animation = 'none';
+                    loadingBar.offsetHeight; // Trigger reflow
+                    loadingBar.style.animation = 'loadingBar 2.5s ease-in-out forwards';
+                }
+                
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'flex';
+                    loadingScreen.style.opacity = '1';
+                    loadingScreen.style.transition = 'opacity 0.3s ease';
+                    
+                    // Hide loading screen after animation completes
+                    setTimeout(() => {
+                        loadingScreen.style.opacity = '0';
+                        loadingScreen.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            loadingScreen.style.display = 'none';
+                            // Trigger React to show portfolio
+                            window.dispatchEvent(new CustomEvent('showPortfolio'));
+                        }, 500);
+                    }, 3000); // 2.5s animation + 0.5s extra
+                }
+            };
+        });
+        
+        // Service Worker for better mobile performance (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
